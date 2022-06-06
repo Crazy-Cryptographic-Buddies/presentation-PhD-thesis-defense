@@ -107,21 +107,27 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\setbeamerfont{subsection in toc}{size=\footnotesize}
+
 \begin{document}
 	
 	\begin{frame}
 		\titlepage
 	\end{frame}
 	
-	\begin{frame}{Outline}
+	\begin{frame}{}
 		\tableofcontents
 		
 		% You might wish to add the option [pausesections]
 	\end{frame}
 	
 	\section{Introduction}
+	\subsection{Zero-Knowledge Proofs and Arguments}
+	\input{subsection-zkp.tex}
+	\subsection{Code-Based Cryptography}
+	\input{subsection-code.tex}
 	\subsection{ZK Proof/Argument Systems in Code-Based Cryptography}
-	\input{subsection-zkaok-in-codes.tex}
+	\input{subsection-zk-in-codes.tex}
 	\section{Contribution of This Thesis}
 	\subsection{Refined Abstraction of Stern}
 	\input{subsection-refined-stern.tex}
@@ -129,10 +135,10 @@
 	\input{subsection-range.tex}
 	\subsection{Arguments for Committed Symmetric Boolean Functions}
 	\input{subsection-csbf.tex}
-	\subsection{Repudiable-and-Claimable Ring Signature Scheme}
-	\input{subsection-rcrs.tex}
 	\subsection{Fully Dynamic Group Signature Scheme}
 	\input{subsection-fdgs.tex}
+	\subsection{Repudiable-and-Claimable Ring Signature Scheme}
+	\input{subsection-rcrs.tex}
 	\subsection{Fully Dynamic Attribute-Based Signature Scheme}
 	\input{subsection-fdabs.tex}
 	\section{Conclusions and Open Problems}

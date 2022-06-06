@@ -1,0 +1,41 @@
+% !TeX root = main.tex
+\begin{frame}{Code-Based Cryptography}
+	Quantum algorithms: potential threats to cryptography based on classical assumptions.
+	
+	Alternative candidates: 
+	\begin{itemize}
+		\item lattices, 
+		\item multivariate polynomials, 
+		\item crytographic hashes, 
+		\item supersingular elliptic curves, 
+		\item and codes.
+	\end{itemize}
+
+	Code-based cryptography is underdeveloped.
+	
+	NIST Post-Quantum Cryptography Standardization Round 3: 
+	\begin{itemize}
+		\item Classical McEliece, 
+		\item BIKE,
+		\item and HQC.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Code-Based Cryptography}
+	Code-Based Problems:
+	\begin{itemize}
+		\item Syndrome Decoding: 
+		
+		given $(\mathbf{A}, \mathbf{y}, w) \in \{0,1\}^{(n - k)\times n}\times \{0,1\}^n\times \mathbb{Z}_+$,
+		
+		find $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y} \wedge \weight(\mathbf{x}) \leq w$.
+		
+		\item Decisional Learning Parity with Noise (DLPN):
+		
+		given the pair $(\mathbf{A}, \mathbf{y}) \in \{0,1\}^{q\times n}\times \{0,1\}^n$
+		
+		satisfying $\mathbf{A}\cdot\mathbf{x}\oplus \mathbf{e} = \mathbf{y}$ where $\mathbf{e} \in \Bdist_\mu^q$,
+		
+		distinguish $(\mathbf{A}, \mathbf{y})$ and $(\mathbf{A}, \mathbf{u})$ where $\mathbf{u}$ is uniform.
+	\end{itemize}
+\end{frame}
