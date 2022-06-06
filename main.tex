@@ -60,6 +60,8 @@
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
 
+\input{macros.tex}
+
 \title{New and Improved Zero-Knowledge Argument Systems for Code-Based Cryptography}
 
 % A subtitle is optional and this may be deleted
@@ -105,13 +107,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\newcommand{\uniformly}{\stackrel{\$}{\leftarrow}}
-\newcommand{\nullity}{\mathsf{nullity}}
-
-\newtheorem{construction}{Construction}
-\newtheorem{claim}{Claim}
-\newtheorem{algorithm}{Algorithm}
-
 \begin{document}
 	
 	\begin{frame}
@@ -126,7 +121,7 @@
 	
 	\section{Introduction}
 	\subsection{ZK Proof/Argument Systems in Code-Based Cryptography}
-	\subsection{subsection-zkaok-in-codes.tex}
+	\input{subsection-zkaok-in-codes.tex}
 	\section{Contribution of This Thesis}
 	\subsection{Refined Abstraction of Stern}
 	\input{subsection-refined-stern.tex}
