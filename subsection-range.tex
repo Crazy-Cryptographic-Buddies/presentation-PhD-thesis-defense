@@ -1,1 +1,31 @@
 % !TeX root = main.tex
+\begin{frame}
+	\underline{Contribution 2.} Code-Based Range Arguments for Signed Fractional Numbers
+	
+	{\small with Khoa Nguyen, Huaxiong Wang, and Neng Zeng}
+	
+	in ASIACRYPT 2019.
+\end{frame}
+
+\begin{frame}{2. Range Arguments for Signed Fractional Numbers}
+	\underline{Motivation.} 
+	\begin{itemize}
+		\item Existing efficient constructions of range proofs and arguments do not consider negative and fractional numbers.
+		\item Possible contexts: health data, financial data, academic records where information is sensitive.
+	\end{itemize}
+
+	\underline{Result.} Code-based Stern-like ZKAoK for inequality between committed signed fractional numbers.
+	
+\end{frame}
+
+\begin{frame}{2. Range Arguments for Signed Fractional Numbers}
+	\underline{Technique.} For proving $X \leq Y$ in ZK, find $Z$ such that $X + Z = Y$.
+	
+	Represent signed fractional numbers $X$ and $Z$ in two's complement:
+	\begin{align*}
+		\sbin(X) = x_\ell \dots x_0\bullet x_{-1}\dots x_{-f} \text{ where } X = -x_\ell \cdot 2^{\ell} + \sum_{i = -f}^{\ell-1} x_i\cdot 2^i\\ 
+		\sbin(Z) = z_\ell \dots z_0\bullet z_{-1}\dots z_{-f} \text{ where } Z = -z_\ell \cdot 2^{\ell} + \sum_{i = -f}^{\ell-1} z_i\cdot 2^i.
+	\end{align*}
+
+	Apply a similar technique apply in \cite{LibertLNW18} with some modifications to prove $X + Z = Y$.
+\end{frame}
