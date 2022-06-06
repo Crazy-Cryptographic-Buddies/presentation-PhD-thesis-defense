@@ -3,10 +3,34 @@
 	\underline{Contribution 1.} Refined Abstraction of Stern
 	
 	with San Ling, Khoa Nguyen, Duong Hieu Phan, Huaxiong Wang and Yanhong Xu.
-	
+\end{frame}
+
+\begin{frame}{1. Refined Abstraction of Stern}
 	\underline{Motivation.} Stern's original ZK protocol address the relation 
 	\begin{equation*}
 		\RelationStern = \{((\mathbf{M},\mathbf{v}), \mathbf{w}) \in \left(\mathbb{Z}_2^{D_0\times D}\times \mathbb{Z}_2^{D_0}\right)\times \FixedWeightSet^D_t : \mathbf{M}\cdot\mathbf{w} = \mathbf{v}\}
 	\end{equation*}
-	where $\FixedWeightSet^D_t = \{\mathbf{x} \in \{0,1\}^D : \weight(\mathbf{x}) = t\}$.
+	where $\FixedWeightSet^D_t = \{\mathbf{w} \in \{0,1\}^D : \weight(\mathbf{w}) = t\}$.
+	
+	To prove in ZK:
+	\begin{itemize}
+			\item $\mathbf{M}\cdot\mathbf{w} =\mathbf{v} \Rightarrow$ Use random mask $\mathbf{r} \in \{0,1\}^D$.
+			\item $\weight(\mathbf{w}) = t \Rightarrow$ Use random permutation $\phi$ on $D$ elements.
+	\end{itemize}
+	
+	``Homomorphic'' property: $\phi(\mathbf{z}) = \phi(\mathbf{r}) \oplus \phi(\mathbf{w})$.
+\end{frame}
+
+\begin{frame}{1. Refined Abstraction of Stern}
+	\underline{Technique.}
+	\begin{itemize}
+		\item Reducing cost of representing mask $\mathbf{r}$ sufficient to satisfy 
+		\begin{equation*}
+			\mathbf{r} \text{ is uniform } \implies \mathbf{w} \oplus \mathbf{r} \text{ is uniform.}
+		\end{equation*}  
+		\item Generalizing $\phi$ to functions $F, F', F''$ ``homomorphically'' satisfying
+		\begin{equation*}
+			F(\mathbf{w}) \oplus F'(\mathbf{r}) = F''(\mathbf{w} \oplus \mathbf{r}).
+		\end{equation*}
+	\end{itemize}
 \end{frame}
