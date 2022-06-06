@@ -8,24 +8,46 @@
 \end{frame}
 
 \begin{frame}{3. Arguments for Committed Symmetric Boolean Functions}
-	Symmetric Boolean function (SBF) $f : \{0,1\}^D \to \{0,1\}$
-	
 	\underline{Motivation.} 
 	\begin{itemize}
 		\item Zero-knowledge proofs/arguments exist for all NP statements consider public statements.
 		\item More precisely, given publicly function $f$ and output $y$, show that $y = f(x)$ for some secret $x$.
 		\item Contexts where $f$ is private are not much investigated.
 	\end{itemize}
+\end{frame} 
+\begin{frame}{3. Arguments for Committed Symmetric Boolean Functions}
 	\underline{Result.}
 	\begin{itemize}
 		\item ZKAoK for correct evaluations of committed functions on committed inputs.
 		\item Committed functions a symmetric Boolean functions.
+		\item Symmetric Boolean function (SBF) $f : \{0,1\}^n \to \{0,1\}$ represented by 
+		\begin{equation*}
+			\mathbf{v}(f) = (v_0, \dots, v_n).
+		\end{equation*}
+		
+		On input $\mathbf{x} \in \{0,1\}^n$, returns $f(\mathbf{x}) = v_w$ where $w = \weight(\mathbf{x})$.
 		\item Complexity linear in input's size.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{3. Arguments for Committed Symmetric Boolean Functions}
 	\underline{Technique.}
-	
-	Represent $f$
+	\begin{enumerate}
+		\item Construct $\mathbf{y} = (y_0, \dots, y_n)$ the $w$-th basis vector.
+		\begin{itemize}
+			\item Construct $\mathbf{z} = (0, \dots, 0, 1, \dots, 1) \in \{0,1\}^{n + 1}$ of weight $w$.
+			\item Compute $y_0 := z_0$ and $y_i := z_i \oplus z_{i - 1}~~ \forall i \in [1, n]$. 
+		\end{itemize}
+		\item Use equivalence $f(\mathbf{x}) = b \iff v_w = b \iff \langle\mathbf{v}, \mathbf{y}\rangle$.
+		\begin{itemize}
+			\item Define $\extCsbf(\mathbf{y}) := (y_0, 0, y_1, 0, \dots, y_n, 0)$.
+			\item Define $\encCsbf(\mathbf{v}) := (\overline{v}_0, v_0, \overline{v}_1, v_1, \dots, \overline{v}_n, v_n)$.
+			\item Compute $\mathbf{b} := \extCsbf(\mathbf{y}) \oplus \encCsbf(\mathbf{v}) = (\mathbf{b}_0 \Vert \mathbf{b}_1\Vert \dots\Vert \mathbf{b}_n)$.
+		\end{itemize}
+		\item Observe
+		\begin{itemize}
+			\item Block $\mathbf{b}_w$ has $2$ same bits equal to $b$.
+			\item For $i \neq w$, $\weight(\mathbf{b}_i)$ is odd.
+		\end{itemize}
+	\end{enumerate}
 \end{frame}
