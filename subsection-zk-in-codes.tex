@@ -1,5 +1,5 @@
 % !TeX root = main.tex
-\begin{frame}{ZKP/ZKA Systems in Code-Based Cryptography}
+\begin{frame}{ZKAoKs in Code-Based Cryptography}
 	In 1993, Stern first proposed an identification protocol \cite{Stern93} based on syndrome decoding problem.\pause
 	
 	A ZKAoK for secret $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y}$ and $\weight(\mathbf{x}) = t$. \pause
@@ -10,4 +10,17 @@
 		\item statistical ZKAoKs for set membership, group and ring signature schemes.\pause 
 		\item Soundness error: $(2/3)^\kappa$ where $\kappa$ is the number of repetitions.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{ZKAoKs in Code-Based Cryptography}
+	\underline{Overview of Results.}\pause
+	
+	{\small 1. Refined Abstraction of Stern (submitted to AC '22)}\pause
+	\begin{enumerate}[$\Rightarrow$]
+		\item {\small 2. Range Arguments \cite{NguyenTWZ19}}\pause
+		\item {\small 3. ZKAoK for Committed Symmetric Boolean Functions \cite{LingNPTW21}}\pause
+		\item {\small 4a. Fully Dynamic Group Signatures (ext. \cite{NguyenTWZ19})}\pause
+		\item {\small 4b. Repudiable-and-Claimable Ring Signatures (ext. \cite{NguyenTWZ19})}\pause
+		\item {\small 5. Fully Dynamic Attribute-Based Signatures (submitted to AC '22)}
+	\end{enumerate}
 \end{frame}
