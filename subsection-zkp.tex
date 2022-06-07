@@ -8,8 +8,20 @@
 	\begin{itemize}
 		\item {\small Completeness. Honest prover always succeeds.}\pause
 		\item {\small Soundness. Cheating prover cannot convince verifier.}\pause
-		\item {\small Zero-knowledge. Verifier gains nothing beyond validity of statement.}
+		\item {\small Zero-knowledge. Verifier gains nothing beyond validity of statement.}\pause
 	\end{itemize}
+
+	
+	\begin{tikzpicture}
+		\node[inner sep=0pt] (prover) at (0,0){\includegraphics[width=.2\textwidth]{prover.png}};
+		\node[below = 0.3cm] at (prover.south) {Prover $(s, w)$};
+		\node[inner sep=0pt] (verifier) at (7,0) {\includegraphics[width=.2\textwidth]{verifier.png}};
+		\node[below = 0.3cm] at (verifier.south) {Verifier $(s)$};
+		
+		\draw[->,thick] (prover.north east) -- (verifier.north west) node[midway]{};
+		\draw[->,thick] (verifier.west) -- (prover.east) node[midway]{};
+		\draw[->,thick] (prover.south east) -- (verifier.south west) node[midway]{};
+	\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Zero-Knowledge Arguments of Knowledge (ZKAoK)}
