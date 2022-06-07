@@ -37,5 +37,18 @@
 
 \begin{frame}{5. Fully Dynamic Attribute-Based Signature Scheme}
 	\underline{Technique.}
-	
+	\begin{enumerate}
+		\item Defining fully dynamic attribute-based signatures:
+		\begin{itemize}
+			\item Adapt definitional framework from Bootle et al. \cite{BootleCCGG16}.
+			\item Lifetime of system is divided into time epochs.
+		\end{itemize}
+		\item Code-based fully dynamic attribute-based signature scheme:
+		\begin{itemize}
+			\item Policies are represented by Boolean circuits.
+			\item User's attribute is $\mathbf{x}$. 
+			\item Put $\mathbf{d} = \Com(\mathbf{x}, \mathbf{r})$ at the leaves of Merkle tree. 
+			\item To sign, construct ZKAoK for (i) $\mathbf{d}$ is a leaf of the tree, (ii) $\mathbf{d}$ is commitment to $\mathbf{x}$ and (iii) $P(\mathbf{x}) = 1$.
+		\end{itemize}
+	\end{enumerate}
 \end{frame}
