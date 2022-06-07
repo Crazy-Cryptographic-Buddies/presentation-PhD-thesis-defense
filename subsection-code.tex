@@ -1,40 +1,40 @@
 % !TeX root = main.tex
 \begin{frame}{Code-Based Cryptography}
-	Quantum algorithms: potential threats to cryptography based on classical assumptions.
+	Quantum algorithms: potential threats to cryptography based on classical assumptions.\pause
 	
-	Alternative candidates: 
+	Alternative candidates: \pause
 	\begin{itemize}
-		\item lattices, 
-		\item multivariate polynomials, 
-		\item crytographic hashes, 
-		\item supersingular elliptic curves, 
-		\item and codes.
+		\item lattices, \pause
+		\item multivariate polynomials, \pause
+		\item crytographic hashes, \pause
+		\item supersingular elliptic curves, \pause
+		\item and codes.\pause
 	\end{itemize}
 
-	Code-based cryptography is underdeveloped.
+	Code-based cryptography is underdeveloped.\pause
 	
-	NIST Post-Quantum Cryptography Standardization Round 3: 
+	NIST Post-Quantum Cryptography Standardization Round 3: \pause
 	\begin{itemize}
-		\item Classical McEliece, 
-		\item BIKE,
+		\item Classical McEliece, \pause
+		\item BIKE,\pause
 		\item and HQC.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Code-Based Cryptography}
-	Code-Based Problems:
+	Code-Based Problems:\pause
 	\begin{itemize}
-		\item Syndrome Decoding: 
+		\item Syndrome Decoding: \pause
 		
-		given $(\mathbf{A}, \mathbf{y}, w) \in \{0,1\}^{(n - k)\times n}\times \{0,1\}^n\times \mathbb{Z}_+$,
+		given $(\mathbf{A}, \mathbf{y}, w) \in \{0,1\}^{(n - k)\times n}\times \{0,1\}^n\times \mathbb{Z}_+$,\pause
 		
-		find $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y} \wedge \weight(\mathbf{x}) \leq w$.
+		find $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y} \wedge \weight(\mathbf{x}) \leq w$.\pause
 		
-		\item Decisional Learning Parity with Noise (DLPN):
+		\item Decisional Learning Parity with Noise (DLPN):\pause
 		
-		given the pair $(\mathbf{A}, \mathbf{y}) \in \{0,1\}^{q\times n}\times \{0,1\}^n$
+		given the pair $(\mathbf{A}, \mathbf{y}) \in \{0,1\}^{q\times n}\times \{0,1\}^n$\pause
 		
-		satisfying $\mathbf{A}\cdot\mathbf{x}\oplus \mathbf{e} = \mathbf{y}$ where $\mathbf{e} \in \Bdist_\mu^q$,
+		satisfying $\mathbf{A}\cdot\mathbf{x}\oplus \mathbf{e} = \mathbf{y}$ where $\mathbf{e} \in \Bdist_\mu^q$,\pause
 		
 		distinguish $(\mathbf{A}, \mathbf{y})$ and $(\mathbf{A}, \mathbf{u})$ where $\mathbf{u}$ is uniform.
 	\end{itemize}

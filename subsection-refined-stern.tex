@@ -8,35 +8,35 @@
 \end{frame}
 
 \begin{frame}{1. Refined Abstraction of Stern}
-	\underline{Motivation.} Stern's original ZK protocol address the relation 
+	\underline{Motivation.} Stern's original ZK protocol address the relation \pause
 	\begin{equation*}
-		\RelationStern = \{((\mathbf{M},\mathbf{v}), \mathbf{w}) \in \left(\mathbb{Z}_2^{D_0\times D}\times \mathbb{Z}_2^{D_0}\right)\times \FixedWeightSet^D_t : \mathbf{M}\cdot\mathbf{w} = \mathbf{v}\}
+		\RelationStern = \left\{((\mathbf{M},\mathbf{v}), \mathbf{w}) \in \left(\mathbb{Z}_2^{D_0\times D}\times \mathbb{Z}_2^{D_0}\right)\times \FixedWeightSet^D_t : \mathbf{M}\cdot\mathbf{w} = \mathbf{v}\right\}\pause
 	\end{equation*}
-	where $\FixedWeightSet^D_t = \{\mathbf{w} \in \{0,1\}^D : \weight(\mathbf{w}) = t\}$.
+	where $\FixedWeightSet^D_t = \{\mathbf{w} \in \{0,1\}^D : \weight(\mathbf{w}) = t\}$.\pause
 	
-	To prove in ZK:
+	To prove in ZK:\pause
 	\begin{itemize}
-			\item $\mathbf{M}\cdot\mathbf{w} =\mathbf{v} \Rightarrow$ Use random mask $\mathbf{r} \in \{0,1\}^D$.
-			\item $\weight(\mathbf{w}) = t \Rightarrow$ Use random permutation $\phi$ on $D$ elements.
+			\item $\mathbf{M}\cdot\mathbf{w} =\mathbf{v} \Rightarrow$ Use random mask $\mathbf{r} \in \{0,1\}^D$.\pause
+			\item $\weight(\mathbf{w}) = t \Rightarrow$ Use random permutation $\phi$ on $D$ elements.\pause
 	\end{itemize}
 	
-	``Homomorphic'' property: $\phi(\mathbf{z}) = \phi(\mathbf{r}) \oplus \phi(\mathbf{w})$.
+	``Homomorphic'' property: $\phi(\mathbf{z}) = \phi(\mathbf{r}) \oplus \phi(\mathbf{w})$.\pause
 	
-	\underline{Results.}
+	\underline{Results.}\pause
 	
-	Smaller argument sizes for opening of $2$-RNSD-based commitments and Merkle-based set membership from \cite{NguyenTWZ19}.
+	Smaller argument sizes for opening of $2$-RNSD-based commitments and Merkle-based set membership from \cite{NguyenTWZ19}.\pause
 	
 	Applied in Contributions 2, 3, 4a, 4b and 5.
 \end{frame}
 
 \begin{frame}{1. Refined Abstraction of Stern}
-	\underline{Technique.}
+	\underline{Technique.}\pause
 	\begin{itemize}
-		\item Reducing cost of representing mask $\mathbf{r}$ sufficient to satisfy 
+		\item Reducing cost of representing mask $\mathbf{r}$ sufficient to satisfy \pause
 		\begin{equation*}
-			\mathbf{r} \text{ is uniform } \implies \mathbf{w} \oplus \mathbf{r} \text{ is uniform.}
+			\mathbf{r} \text{ is uniform } \implies \mathbf{w} \oplus \mathbf{r} \text{ is uniform.}\pause
 		\end{equation*}  
-		\item Generalizing $\phi$ to functions $F, F', F''$ ``homomorphically'' satisfying
+		\item Generalizing $\phi$ to functions $F, F', F''$ ``homomorphically'' satisfying\pause
 		\begin{equation*}
 			F(\mathbf{w}) \oplus F'(\mathbf{r}) = F''(\mathbf{w} \oplus \mathbf{r}).
 		\end{equation*}

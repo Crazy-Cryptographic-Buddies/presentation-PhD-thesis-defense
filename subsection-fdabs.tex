@@ -8,46 +8,47 @@
 \end{frame}
 
 \begin{frame}{5. Fully Dynamic Attribute-Based Signature Scheme}
-	Attribute-based signature (ABS) scheme allows a signer having secret attribute $x$
+	Attribute-based signature (ABS) scheme allows a signer having secret attribute $x$\pause
 	\begin{itemize}
-		\item to sign anonymously with associated public policy $P$.
-		\item $P(x) = 1$.
+		\item to sign anonymously with associated public policy $P$.\pause
+		\item $P(x) = 1$.\pause
 	\end{itemize}
 	
-	\underline{Motivation.}
+	\underline{Motivation.}\pause
 	\begin{itemize}
-		\item Expressiveness of policies.
-		\item Unrevocability of signing keys.
+		\item Expressiveness of policies.\pause
+		\item Unrevocability of signing keys.\pause
 		\item Diversity of computational assumptions.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{5. Fully Dynamic Attribute-Based Signature Scheme}
-	\underline{Results.} 
+	\underline{Results.} \pause
 	
-	New definition of fully dynamic attribute-based signatures.
+	New definition of fully dynamic attribute-based signatures.\pause
 	
-	Code-based fully dynamic attribute-based signature scheme:
+	Code-based fully dynamic attribute-based signature scheme:\pause
 	\begin{itemize}
-		\item Policy: circuits with NAND gates only.
-		\item Revocability of signing keys $\Rightarrow$ fully dynamic.
-		\item Regular Null Syndrome Decoding $\Rightarrow$ code-based assumptions.
+		\item Policy: circuits with NAND gates only.\pause
+		\item Revocability of signing keys $\Rightarrow$ fully dynamic.\pause
+		\item Regular Null Syndrome Decoding $\Rightarrow$ code-based assumptions.\pause
+		\item Signature size logarithmic in the maximum number of issued attributes.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{5. Fully Dynamic Attribute-Based Signature Scheme}
-	\underline{Technique.}
+	\underline{Technique.}\pause
 	\begin{enumerate}
-		\item Defining fully dynamic attribute-based signatures:
+		\item Defining fully dynamic attribute-based signatures:\pause
 		\begin{itemize}
-			\item Adapt definitional framework from Bootle et al. \cite{BootleCCGG16}.
-			\item Lifetime of system is divided into time epochs.
+			\item Adapt definitional framework from Bootle et al. \cite{BootleCCGG16}.\pause
+			\item Lifetime of system is divided into time epochs.\pause
 		\end{itemize}
-		\item Code-based fully dynamic attribute-based signature scheme:
+		\item Code-based fully dynamic attribute-based signature scheme:\pause
 		\begin{itemize}
-			\item Policies are represented by Boolean circuits.
-			\item User's attribute is $\mathbf{x}$. 
-			\item Put $\mathbf{d} = \Com(\mathbf{x}, \mathbf{r})$ at the leaves of Merkle tree. 
+			\item Policies are represented by Boolean circuits.\pause
+			\item User's attribute is $\mathbf{x}$. \pause
+			\item Put $\mathbf{d} = \Com(\mathbf{x}, \mathbf{r})$ at the leaves of Merkle tree. \pause
 			\item To sign, construct ZKAoK for (i) $\mathbf{d}$ is a leaf of the tree, (ii) $\mathbf{d}$ is commitment to $\mathbf{x}$ and (iii) $P(\mathbf{x}) = 1$.
 		\end{itemize}
 	\end{enumerate}

@@ -1,6 +1,13 @@
 % !TeX root = main.tex
 \begin{frame}{ZKP/ZKA Systems in Code-Based Cryptography}
-	In 1993, Stern first proposed an identification protocol \cite{Stern93} based on syndrome decoding problem.
+	In 1993, Stern first proposed an identification protocol \cite{Stern93} based on syndrome decoding problem.\pause
 	
-	A ZKAoK for secret $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y}$ and $\weight(\mathbf{x}) = t$. 
+	A ZKAoK for secret $\mathbf{x}$ satisfying $\mathbf{A}\cdot\mathbf{x} = \mathbf{y}$ and $\weight(\mathbf{x}) = t$. \pause
+	
+	Nguyen et al. \cite{NguyenTWZ19, NguyenTWZ19eprint} proposed \pause
+	\begin{itemize}
+		\item a new commitment scheme based on hardness assumption of $2$-regular null syndrome decoding problem ($\TwoRNSD$).\pause
+		\item statistical ZKAoKs for set membership, group and ring signature schemes.\pause 
+		\item Soundness error: $(2/3)^\kappa$ where $\kappa$ is the number of repetitions.
+	\end{itemize}
 \end{frame}

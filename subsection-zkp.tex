@@ -1,24 +1,27 @@
 % !TeX root = main.tex
 \begin{frame}{Zero-Knowledge Proofs and Arguments}
-	Originally proposed by Goldwasser, Micali and Rackoff \cite{GoldwasserMR85}.
+	Originally proposed by Goldwasser, Micali and Rackoff \cite{GoldwasserMR85}.\pause
 	
-	Interactive communication between prover and verifier.
+	Interactive communication between prover and verifier.\pause
 	
-	Prover proves a statement with secret behind.
+	Prover proves a statement with secret behind.\pause
 	
-	Properties:
+	Properties:\pause
 	\begin{itemize}
-		\item {\small Completeness. Honest prover always succeeds.}
-		\item {\small Soundness. Cheating prover cannot convince verifier.}
+		\item {\small Completeness. Honest prover always succeeds.}\pause
+		\item {\small Soundness. Cheating prover cannot convince verifier.}\pause
 		\item {\small Zero-knowledge. Verifier gains nothing beyond validity of statement.}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Zero-Knowledge Proofs and Arguments}
-	More on soundness:
+	More on soundness:\pause
 	\begin{itemize}
-		\item Computionally-bounded prover $\Rightarrow$ Arguments. 
-		\item Uncomputationally-bounded prover $\Rightarrow$ Proofs.
-		\item Proofs/Argument of Knowledge: $\exists$ extractor having access to the prover to produce valid witness.
+		\item Soundness error: probability that a cheating prover can convince a verifier.\pause 
+		\item Computionally-bounded prover $\Rightarrow$ Arguments. \pause
+		\item Uncomputationally-bounded prover $\Rightarrow$ Proofs.\pause
+		\item Proofs/Argument of Knowledge: $\exists$ extractor having access to the prover to produce valid witness.\pause
 	\end{itemize}
+
+	In this thesis, constructions are zero-knowledge arguments of knowledge (ZKAoK).
 \end{frame}
