@@ -1,21 +1,55 @@
 % !TeX root = main.tex
 \begin{frame}{}
-	\underline{Contribution 4a.} Code-Based Fully Dynamic Group Signature Scheme
+	\underline{Contribution 4.} Code-Based Fully Dynamic Group Signature (FDGS) and Repudiable-and-Claimable Ring Signature (RCRS) Schemes.
 	
 	{\small with Khoa Nguyen, Huaxiong Wang, and Neng Zeng}
 	
 	extended from ASIACRYPT 2019 \cite{NguyenTWZ19}.
 \end{frame}
 
-\begin{frame}{4a. Fully-Dynamic Group Signature Scheme}
+\begin{frame}{FDGS and RCRS Schemes}
+	\begin{enumerate}
+		\item Group signatures allow a member in a group to anonymously sign on messages on behalf of the group.
+		\begin{itemize}
+			\item A group is managed by a group manager, which is able to enroll new users and trace identities.
+			\item Properties: correctness, anonymity and traceability.
+		\end{itemize}
+		\item Ring signatures allow any member of an arbitrary set of users can sign on behalf of this set.
+		\begin{itemize}
+			\item Properties: correctness, anonymity and unforgeability.
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{FDGS and RCRS Schemes}
 	\underline{Motivation.}
 	\begin{itemize}
 		\item Standard group signatures do not have any mechanism to revoke users.
+		\item Standard ring signatures do not allow users to repudiate or claim the ownership of signatures.
 		\item Diversity of assumptions.
 	\end{itemize}
-	\underline{Result.}
+	\underline{Results.}
 	\begin{itemize}
 		\item Code-based fully dynamic group signature scheme.
 		\item Repudiable-and-claimable ring signature scheme.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{FDGS and RCRS Schemes}
+	\underline{Techniques.}
+	\begin{enumerate}
+		\item Code-based fully dynamic group signature scheme:
+		\begin{itemize}
+			\item Follow definitional time epoch framework of Bootle et al. \cite{BootleCCGG16} and adapted from Ling et al. \cite{LingNWX17}.
+			\item To enroll or revoke users, update paths from Merkle tree and advance to new epoch.
+			\item To sign, prove that (i) public key corresponds to signing key, (ii) public key is non-zero and in leaf of the tree, and (iii) correctly encrypts the identity.
+		\end{itemize}
+		\item Code-based repudiable-and-claimable ring signature scheme:
+		\begin{itemize}
+			\item User's signing key is $\mathbf{x}$.
+			\item To sign, prove that (i) public key corresponds to signing key, (ii) public key is in leaf of the tree, and (iii) $\mathbf{p} = \mathbf{A}\cdot \mathbf{x} \oplus \mathbf{e}$ where $\weight(\mathbf{e}) \leq t$.
+			\item User with signing key $\mathbf{x}$ to claim: prove $\mathbf{p} \oplus \mathbf{A}\cdot\mathbf{x} \leq t$. 
+			\item User with signing key $\mathbf{x}'\not= \mathbf{x}$ to repudiate: prove $\mathbf{p} \oplus\mathbf{A}\cdot\mathbf{x} > t$.
+		\end{itemize}
+	\end{enumerate}
 \end{frame}
