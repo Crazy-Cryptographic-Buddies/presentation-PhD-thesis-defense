@@ -1,10 +1,8 @@
 % !TeX root = main.tex
-\begin{frame}{Zero-Knowledge Proofs and Arguments}
+\begin{frame}{Zero-Knowledge Arguments of Knowledge (ZKAoK)}
 	Originally proposed by Goldwasser, Micali and Rackoff \cite{GoldwasserMR85}.\pause
 	
 	Interactive communication between prover and verifier.\pause
-	
-	Prover proves a statement with secret behind.\pause
 	
 	Properties:\pause
 	\begin{itemize}
@@ -14,14 +12,17 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Zero-Knowledge Proofs and Arguments}
-	More on soundness:\pause
+\begin{frame}{Zero-Knowledge Arguments of Knowledge (ZKAoK)}
+	Zero-knowledge arguments of knowledge (ZKAoKs).\pause
 	\begin{itemize}
-		\item Soundness error: probability that a cheating prover can convince a verifier.\pause 
-		\item Computionally-bounded prover $\Rightarrow$ Arguments. \pause
-		\item Uncomputationally-bounded prover $\Rightarrow$ Proofs.\pause
-		\item Proofs/Argument of Knowledge: $\exists$ extractor having access to the prover to produce valid witness.\pause
+		\item Argument: Computationally-bounded provers.\pause
+		\item Argument of Knowledge: 
+		
+		$\exists$ extractor, with access to prover, to extract valid witness.\pause
 	\end{itemize}
 
-	In this thesis, constructions are zero-knowledge arguments of knowledge (ZKAoK).
+	Constructions in this thesis are ZKAoKs.\pause
+	\begin{enumerate}[$\Rightarrow$]
+		\item Privacy-preserving constructions.
+	\end{enumerate}
 \end{frame}
