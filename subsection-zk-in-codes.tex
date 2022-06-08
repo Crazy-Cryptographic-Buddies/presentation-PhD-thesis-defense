@@ -13,7 +13,15 @@
 \end{frame}
 
 \begin{frame}{ZKAoKs in Code-Based Cryptography}
-	\underline{$2$-RNSD.} \footnote{continue writing here}
+	
+		$\Regular(k,c)$: vector of $k/c$ blocks of $2^c$-bit unit vector.
+	
+		$\TwoRegular(k,c) = \{\mathbf{x}\oplus\mathbf{y} \in \{0,1\}^{2^c\cdot k / c} : \mathbf{x}, \mathbf{y} \in \Regular(k, c)\}.$
+	
+		\underline{$\TwoRNSD$ problem.}  Given $n, k, c \in \mathbb{Z}_+$ satisfying $c \mid k$, $\mathbf{A}\uniformly\{0,1\}^{n\times 2^c\cdot k/c}$, the $\TwoRNSD_{n,k,c}$ asks to find $\mathbf{w}$ such that $$\begin{cases}
+			\mathbf{A}\cdot \mathbf{w} = \mathbf{0}^{n},\\
+			\mathbf{w}\in\TwoRegular(n+ k,c).
+		\end{cases}$$
 \end{frame}
 \begin{frame}{ZKAoKs in Code-Based Cryptography}
 	\underline{Abstraction of Stern \cite{NguyenTWZ19}.} \footnote{continue writing here}
