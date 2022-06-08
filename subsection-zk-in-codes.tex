@@ -14,13 +14,13 @@
 
 \begin{frame}{ZKAoKs in Code-Based Cryptography}
 	
-		$\Regular(k,c)$: vector of $k/c$ blocks of $2^c$-bit unit vector.
+		$\Regular(k,c)$: vector of $k/c$ blocks of $2^c$-bit unit vectors.\pause
 	
-		$\TwoRegular(k,c) = \{\mathbf{x}\oplus\mathbf{y} \in \{0,1\}^{2^c\cdot k / c} : \mathbf{x}, \mathbf{y} \in \Regular(k, c)\}.$
+		$\TwoRegular(k,c) = \{\mathbf{x}\oplus\mathbf{y}: \mathbf{x}, \mathbf{y} \in \Regular(k, c)\}.$\pause
 	
-		\underline{$\TwoRNSD$ problem.}  Given $n, k, c \in \mathbb{Z}_+$ satisfying $c \mid k$, $\mathbf{A}\uniformly\{0,1\}^{n\times 2^c\cdot k/c}$, the $\TwoRNSD_{n,k,c}$ asks to find $\mathbf{w}$ such that $$\begin{cases}
+		\underline{$\TwoRNSD$ problem.}  Given $n, k, c \in \mathbb{Z}_+$ satisfying $c \mid k$, $\mathbf{A}\uniformly\{0,1\}^{n\times 2^c\cdot k/c}$, the $\TwoRNSD_{n,k,c}$ asks to find $\mathbf{w}$ such that \pause$$\begin{cases}
 			\mathbf{A}\cdot \mathbf{w} = \mathbf{0}^{n},\\
-			\mathbf{w}\in\TwoRegular(n+ k,c).
+			\mathbf{w}\in\TwoRegular(k,c).
 		\end{cases}$$
 \end{frame}
 \begin{frame}{ZKAoKs in Code-Based Cryptography}
