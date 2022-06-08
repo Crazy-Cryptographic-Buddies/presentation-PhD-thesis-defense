@@ -14,8 +14,10 @@
 		\item Possible contexts: health data, financial data, academic records where information is sensitive.\pause
 	\end{itemize}
 
-	\underline{Result.} Code-based Stern-like ZKAoK for inequality between committed signed fractional numbers.\pause
+	\underline{Result.} Code-based Stern-like ZKAoK for inequality between committed signed fractional numbers:\pause
 	\begin{itemize}
+		\item Given $\Com(X, \mathbf{r}_x), \Com(Y, \mathbf{r}_y)$, prove $X \leq Y$ (or $X < Y$).\pause 
+		\item Signed and fractional.\pause
 		\item Linear size communication cost.
 	\end{itemize}
 	
@@ -30,5 +32,5 @@
 		\sbin(Z) = z_\ell \dots z_0\bullet z_{-1}\dots z_{-f} \text{ where } Z = -z_\ell \cdot 2^{\ell} + \sum_{i = -f}^{\ell-1} z_i\cdot 2^i.
 	\end{align*}\pause
 
-	Apply a similar technique in \cite{LibertLNW18} with some modifications to prove $X + Z = Y$.
+	Apply a similar technique from Libert et al. \cite{LibertLNW18} with some modifications to prove $X + Z = Y$.
 \end{frame}

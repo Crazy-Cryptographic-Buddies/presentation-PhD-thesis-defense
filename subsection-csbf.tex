@@ -11,7 +11,13 @@
 	\underline{Motivation.} \pause
 	\begin{itemize}
 		\item Zero-knowledge proofs/arguments exist for all NP statements consider public statements.\pause
-		\item More precisely, given publicly function $f$ and output $y$, show that $y = f(x)$ for some secret $x$.\pause
+		\item Public function $f$ and public output $b$, \pause
+		
+		show that $b = f(x)$ where $x$ is secret.\pause
+		\item Example: show in ZK knowledge of $\mathbf{x}$ s.t. $\textsf{SHA-256}(\mathbf{x})$ is equal to\pause
+		{\footnotesize \begin{equation*}
+			e4a41c66866bd166fbc0f685dbd7fe28b7bc1e62c018067ef8e203a35eaf210b
+		\end{equation*}}\pause
 		\item Contexts where $f$ is private are not much investigated.
 	\end{itemize}
 \end{frame} 
@@ -24,7 +30,6 @@
 		\begin{equation*}
 			\mathbf{v}(f) = (v_0, \dots, v_n).\pause
 		\end{equation*}
-		
 		On input $\mathbf{x} \in \{0,1\}^n$, returns $f(\mathbf{x}) = v_w$ where $w = \weight(\mathbf{x})$.\pause
 		\item Complexity linear in input's size.
 	\end{itemize}
@@ -34,20 +39,14 @@
 	\underline{Technique.}\pause
 	\begin{enumerate}
 		\item Construct $\mathbf{y} = (y_0, \dots, y_n)$ the $w$-th basis vector.\pause
-		\begin{itemize}
-			\item Construct $\mathbf{z} = (0, \dots, 0, 1, \dots, 1) \in \{0,1\}^{n + 1}$ of weight $w$.\pause
-			\item Compute $y_0 := z_0$ and $y_i := z_i \oplus z_{i - 1}~~ \forall i \in [1, n]$. \pause
-		\end{itemize}
 		\item Use equivalence $f(\mathbf{x}) = b \iff v_w = b \iff \langle\mathbf{v}, \mathbf{y}\rangle=b$.\pause
 		\begin{itemize}
-			\item Define $\extCsbf(\mathbf{y}) := (y_0, 0, y_1, 0, \dots, y_n, 0)$.\pause
-			\item Define $\encCsbf(\mathbf{v}) := (\overline{v}_0, v_0, \overline{v}_1, v_1, \dots, \overline{v}_n, v_n)$.\pause
-			\item Compute $\mathbf{b} := \extCsbf(\mathbf{y}) \oplus \encCsbf(\mathbf{v}) = (\mathbf{b}_0 \Vert \mathbf{b}_1\Vert \dots\Vert \mathbf{b}_n)$.\pause
+			\item Compute $\mathbf{c} := \extCsbf(\mathbf{y}) \oplus \encCsbf(\mathbf{v}) = (\mathbf{c}_0 \Vert \mathbf{c}_1\Vert \dots\Vert \mathbf{c}_n)$.\pause
 		\end{itemize}
 		\item Observe\pause
 		\begin{itemize}
-			\item Block $\mathbf{b}_w$ has $2$ same bits equal to $b$.\pause
-			\item For $i \neq w$, $\weight(\mathbf{b}_i)$ is odd.
+			\item Block $\mathbf{c}_w$ has $2$ same bits equal to $b$.\pause
+			\item For $i \neq w$, $\weight(\mathbf{c}_i)$ is odd.
 		\end{itemize}
 	\end{enumerate}
 \end{frame}

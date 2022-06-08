@@ -14,9 +14,9 @@
 	
 	\begin{tikzpicture}
 		\node[inner sep=0pt] (prover) at (0,0){\includegraphics[width=.2\textwidth]{prover.png}};
-		\node[below = 0.3cm] at (prover.south) {Prover $(s, w)$};
+		\node[below = 0.3cm] at (prover.south) {Prover $(s, w)$};\pause
 		\node[inner sep=0pt] (verifier) at (7,0) {\includegraphics[width=.2\textwidth]{verifier.png}};
-		\node[below = 0.3cm] at (verifier.south) {Verifier $(s)$};
+		\node[below = 0.3cm] at (verifier.south) {Verifier $(s)$};\pause
 		
 		\draw[->,thick] (prover.north east) -- (verifier.north west) node[midway]{};
 		\draw[->,thick] (verifier.west) -- (prover.east) node[midway]{};

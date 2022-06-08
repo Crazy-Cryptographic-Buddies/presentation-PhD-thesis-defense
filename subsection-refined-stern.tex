@@ -13,20 +13,18 @@
 		\RelationStern = \left\{((\mathbf{M},\mathbf{v}), \mathbf{w}) \in \left(\mathbb{Z}_2^{D_0\times D}\times \mathbb{Z}_2^{D_0}\right)\times \FixedWeightSet^D_t : \mathbf{M}\cdot\mathbf{w} = \mathbf{v}\right\}\pause
 	\end{equation*}
 	where $\FixedWeightSet^D_t = \{\mathbf{w} \in \{0,1\}^D : \weight(\mathbf{w}) = t\}$.\pause
-	
-	To prove in ZK:\pause
 	\begin{itemize}
-			\item $\mathbf{M}\cdot\mathbf{w} =\mathbf{v} \Rightarrow$ Use random mask $\mathbf{r} \in \{0,1\}^D$ $\Rightarrow$.\pause
+			\item $\mathbf{M}\cdot\mathbf{w} =\mathbf{v} \Rightarrow$ Use random mask $\mathbf{r} \in \{0,1\}^D$.\pause
 			\item $\weight(\mathbf{w}) = t \Rightarrow$ Use random permutation $\phi$ on $D$ elements.\pause
 	\end{itemize}
 	
 	``Homomorphic'' property: $\phi(\mathbf{w} \oplus \mathbf{r}) = \phi(\mathbf{r}) \oplus \phi(\mathbf{w})$.\pause
 	
-	Issues: large presentation costs.\pause
+	Large representation costs.
 	
 	\underline{Results.}\pause
 	
-	Smaller argument sizes for opening of $2$-RNSD-based commitments and Merkle-based set membership from \cite{NguyenTWZ19}.\pause
+	Smaller argument sizes for (i) opening of $2$-RNSD-based commitments and (ii) Merkle tree-based set membership from \cite{NguyenTWZ19}.\pause
 	
 	Applied in Contributions 2, 3, 4a, 4b and 5.
 \end{frame}

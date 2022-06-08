@@ -8,10 +8,10 @@
 \end{frame}
 
 \begin{frame}{5. Fully Dynamic Attribute-Based Signature Scheme}
-	Attribute-based signature (ABS) scheme allows a signer having secret attribute $x$\pause
+	Attribute-based signature (ABS) scheme allows a signer having secret attribute\pause
 	\begin{itemize}
 		\item to sign anonymously with associated public policy $P$.\pause
-		\item $P(x) = 1$.\pause
+		\item $P(\textsf{attrb}) = 1$.\pause
 	\end{itemize}
 	
 	\underline{Motivation.}\pause
@@ -32,7 +32,7 @@
 		\item Policy: circuits with NAND gates only.\pause
 		\item Revocability of signing keys $\Rightarrow$ fully dynamic.\pause
 		\item Regular Null Syndrome Decoding $\Rightarrow$ code-based assumptions.\pause
-		\item Signature size logarithmic in the maximum number of issued attributes.
+		\item Logarithmic size signature.
 	\end{itemize}
 \end{frame}
 
@@ -47,9 +47,12 @@
 		\item Code-based fully dynamic attribute-based signature scheme:\pause
 		\begin{itemize}
 			\item Policies are represented by Boolean circuits.\pause
-			\item User's attribute is $\mathbf{x}$. \pause
-			\item Put $\mathbf{d} = \Com(\mathbf{x}, \mathbf{r})$ at the leaves of Merkle tree. \pause
-			\item To sign, construct ZKAoK for (i) $\mathbf{d}$ is a leaf of the tree, (ii) $\mathbf{d}$ is commitment to $\mathbf{x}$ and (iii) $P(\mathbf{x}) = 1$.
+			\item To sign, construct ZKAoK that \pause
+			\begin{enumerate}[(i)]
+				\item $\textsf{pk}$ is a leaf of the tree,\\ \pause
+				\item $\textsf{pk}$ is commitment to $\textsf{attrb}$ and\\ \pause
+				\item $P(\textsf{attrb}) = 1$.
+			\end{enumerate} 
 		\end{itemize}
 	\end{enumerate}
 \end{frame}
