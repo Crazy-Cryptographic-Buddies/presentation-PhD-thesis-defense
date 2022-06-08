@@ -31,7 +31,7 @@
 	\underline{Results.}\pause
 	\begin{itemize}
 		\item Code-based fully dynamic group signature scheme.\pause
-		\item Repudiable-and-claimable ring signature scheme.\pause
+		\item Code-based repudiable-and-claimable ring signature scheme.\pause
 		\item Both have logarithmic size, in the number of users, signatures.
 	\end{itemize}
 \end{frame}
@@ -50,7 +50,7 @@
 			\item Follow security definitions from Park and Sealfon \cite{ParkS19}.\pause
 			\item When signing, compute $\mathbf{p} = \mathbf{A}\cdot \textsf{sk} \oplus \mathbf{e}$ where $\weight(\mathbf{e}) \leq t$.\pause
 			\item To claim with $\textsf{sk}$: prove $\mathbf{p} \oplus \mathbf{A}\cdot\textsf{sk} \leq t$. \pause
-			\item To repudiate with $\textsf{sk}'\not= \textsf{sk}$ to repudiate: prove $\mathbf{p} \oplus\mathbf{A}\cdot\textsf{sk}' > t$.
+			\item To repudiate with $\textsf{sk}'\not= \textsf{sk}$: prove $\mathbf{p} \oplus\mathbf{A}\cdot\textsf{sk}' > t$.
 		\end{itemize}
 	\end{enumerate}
 \end{frame}

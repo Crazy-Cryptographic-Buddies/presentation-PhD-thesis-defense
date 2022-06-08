@@ -46,11 +46,11 @@
 		\end{itemize}
 		\item Code-based fully dynamic attribute-based signature scheme:\pause
 		\begin{itemize}
-			\item Policies are represented by Boolean circuits.\pause
+			\item Policies are represented by Boolean circuits with NAND gates.\pause
 			\item To sign, construct ZKAoK that \pause
 			\begin{enumerate}[(i)]
-				\item $\textsf{pk}$ is a leaf of the tree,\\ \pause
-				\item $\textsf{pk}$ is commitment to $\textsf{attrb}$ and\\ \pause
+				\item $\textsf{pk}=\Com(\textsf{attrb};\mathbf{r})$,\\ \pause
+				\item $\textsf{pk}$ is a leaf of the tree, and\\ \pause
 				\item $P(\textsf{attrb}) = 1$.
 			\end{enumerate} 
 		\end{itemize}

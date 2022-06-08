@@ -4,14 +4,6 @@
 	
 	Interactive communication between prover and verifier.\pause
 	
-	Properties:\pause
-	\begin{itemize}
-		\item {\small Completeness. Honest prover always succeeds.}\pause
-		\item {\small Soundness. Cheating prover cannot convince verifier.}\pause
-		\item {\small Zero-knowledge. Verifier gains nothing beyond validity of statement.}\pause
-	\end{itemize}
-
-	
 	\begin{tikzpicture}
 		\node[inner sep=0pt] (prover) at (0,0){\includegraphics[width=.2\textwidth]{prover.png}};
 		\node[below = 0.3cm] at (prover.south) {Prover $(s, w)$};\pause
@@ -22,9 +14,14 @@
 		\draw[->,thick] (verifier.west) -- (prover.east) node[midway]{};
 		\draw[->,thick] (prover.south east) -- (verifier.south west) node[midway]{};
 	\end{tikzpicture}
-\end{frame}
-
+\end{frame} 
 \begin{frame}{Zero-Knowledge Arguments of Knowledge (ZKAoK)}
+	Properties:\pause
+	\begin{itemize}
+		\item {\small Completeness. Honest prover always succeeds.}\pause
+		\item {\small Soundness. Cheating prover cannot convince verifier.}\pause
+		\item {\small Zero-knowledge. Verifier gains nothing beyond validity of statement.}\pause
+	\end{itemize}
 	Zero-knowledge arguments of knowledge (ZKAoKs).\pause
 	\begin{itemize}
 		\item Argument: Computationally-bounded provers.\pause

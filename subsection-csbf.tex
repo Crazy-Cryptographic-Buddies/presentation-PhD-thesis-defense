@@ -14,7 +14,7 @@
 		\item Public function $f$ and public output $b$, \pause
 		
 		show that $b = f(x)$ where $x$ is secret.\pause
-		\item Example: show in ZK knowledge of $\mathbf{x}$ s.t. $\textsf{SHA-256}(\mathbf{x})$ is equal to\pause
+		\item Example: show in ZK of $\mathbf{x}$ s.t. $\textsf{SHA-256}(\mathbf{x})$ is equal to\pause
 		{\footnotesize \begin{equation*}
 			e4a41c66866bd166fbc0f685dbd7fe28b7bc1e62c018067ef8e203a35eaf210b
 		\end{equation*}}\pause
@@ -25,7 +25,7 @@
 	\underline{Result.}\pause
 	\begin{itemize}
 		\item ZKAoK for correct evaluations of committed functions on committed inputs.\pause
-		\item Committed functions a symmetric Boolean functions.\pause
+		\item Committed function is a symmetric Boolean functions.\pause
 		\item Symmetric Boolean function (SBF) $f : \{0,1\}^n \to \{0,1\}$ represented by \pause
 		\begin{equation*}
 			\mathbf{v}(f) = (v_0, \dots, v_n).\pause
@@ -39,9 +39,9 @@
 	\underline{Technique.}\pause
 	\begin{enumerate}
 		\item Construct $\mathbf{y} = (y_0, \dots, y_n)$ the $w$-th basis vector.\pause
-		\item Use equivalence $f(\mathbf{x}) = b \iff v_w = b \iff \langle\mathbf{v}, \mathbf{y}\rangle=b$.\pause
+		\item Use equivalence $f(\mathbf{x}) = b \iff v_w = b \iff \langle\mathbf{v}(f), \mathbf{y}\rangle=b$.\pause
 		\begin{itemize}
-			\item Compute $\mathbf{c} := \extCsbf(\mathbf{y}) \oplus \encCsbf(\mathbf{v}) = (\mathbf{c}_0 \Vert \mathbf{c}_1\Vert \dots\Vert \mathbf{c}_n)$.\pause
+			\item Compute $\mathbf{c} := \extCsbf(\mathbf{y}) \oplus \encCsbf(\mathbf{v}(f)) = (\mathbf{c}_0 \Vert \mathbf{c}_1\Vert \dots\Vert \mathbf{c}_n)$.\pause
 		\end{itemize}
 		\item Observe\pause
 		\begin{itemize}
